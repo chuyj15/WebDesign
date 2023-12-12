@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 가로 유형</title>
+    <link rel="stylesheet" href="메뉴가로유형m1.css">
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"></div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">메뉴1</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴1-1</a></li>
+                            <li><a href="#">서브메뉴1-2</a></li>
+                            <li><a href="#">서브메뉴1-3</a></li>
+                            <li><a href="#">서브메뉴1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴2</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴2-1</a></li>
+                            <li><a href="#">서브메뉴2-2</a></li>
+                            <li><a href="#">서브메뉴2-3</a></li>
+                            <li><a href="#">서브메뉴2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴3</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴3-1</a></li>
+                            <li><a href="#">서브메뉴3-2</a></li>
+                            <li><a href="#">서브메뉴3-3</a></li>
+                            <li><a href="#">서브메뉴3-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴4</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴4-1</a></li>
+                            <li><a href="#">서브메뉴4-2</a></li>
+                            <li><a href="#">서브메뉴4-3</a></li>
+                            <li><a href="#">서브메뉴4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //header-->
+
+        <div id="slider"></div>
+        <!--//slider-->
+
+        <div id="contents">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+        <!--//contents-->
+
+        <div id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+        <!--//footer-->
+    </div>
+    <!--wrap-->
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //제이쿼리
+        //문서에 함수를 실행할 준비가 됐다
+        // $(function(){})
+        $(document).ready(function(){
+            //메뉴에 오버했을 때 자식메뉴를 보여줘라~!
+            $('.nav > ul > li').mouseover(function(){
+                //find() : 자식중에 찾아라 slideDown(기본값 600) : 천천히 보여줘라
+                $(this).find('.submenu').stop().slideDown(200)
+            });
+            $('.nav > ul > li').mouseout(function(){
+                //find() : 자식중에 찾아라 slideDown() : 천천히 보여줘라
+                $(this).find('.submenu').stop().slideUp(200)
+            });
+        });
+    </script> -->
+
+    <script>
+        //자바스크립트
+        window.onload = function(){
+            let navList = document.querySelectorAll('.nav > ul > li')
+            console.log(navList) //4개가 있다는 걸 자바스크립트는 확인을 시켜줘야 한다. (forEach)
+            navList.forEach( function(navItem){
+                //자바스크립트는 애니메이션이 없음. 제이쿼리에만 있음. 
+                //자바스크립트는 display:none을 사용할 수 없음. 
+                //그래서 height 값을 0이었다가 늘려줄 거임. 
+                navItem.addEventListener("mouseover", function(){
+                    this.querySelector('.submenu').style.height = "155px"
+                })
+                navItem.addEventListener("mouseout", function(){
+                    this.querySelector('.submenu').style.height = "0"
+                })
+            } )
+        }
+    </script>
+</body>
+</html>

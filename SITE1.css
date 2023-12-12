@@ -1,0 +1,126 @@
+@charset "UTF-8";
+* { margin : 0; padding : 0; box-sizing: border-box; }
+a { text-decoration: none; color: inherit; }
+li { list-style: none; }
+img { vertical-align: top;}
+
+.wrap {width: 1200px; background-color: #000000; margin: 0 auto; position: relative; }
+.wrap .header {
+    height: 100px; width: 100%; background-color: #b4b4b4;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.wrap .header .logo { padding: 30px;}
+.wrap .header .nav { z-index: 1; text-align: center; }
+.wrap .header .nav > ul { display : flex;}
+.wrap .header .nav > ul >li { 
+    position: relative; width: 130px; height: 50px;}
+.wrap .header .nav > ul >li >a {
+    padding: 15px; height: 100%; width: 100%;
+    display: block ; background-color: #8d8d8d;}
+.wrap .header .nav > ul >li > ul {
+    display: none;
+    position: absolute; top: 50px; left: 0; width: 100%;
+}
+.wrap .header .nav > ul >li > ul >li  { height: 40px; /* 40px*/}
+.wrap .header .nav > ul >li > ul >li >a {
+    padding: 10px; height: 100%;
+    display: block ; background-color: #686868;}
+
+
+/* 이미지 슬라이드 */
+/* .wrap .slider {
+    height: 300px; width: 100%;  background-color: #8a8a8a; overflow: hidden;
+}
+.wrap .slider .sliderWrap { width: 400%; height: 100%;display: flex; }
+.wrap .slider .sliderWrap .slide { width: 25%; height: 100%;position: relative; }
+.wrap .slider .sliderWrap .slide > img { width: 100%; height: 100%;height: 100%; overflow: hidden;}
+.wrap .slider .content3 .slide > .text {
+    position: absolute; width: 500px; height: 70px;
+    top: 50%; left: 50%; translate: -50% -50%; background-color: #fffa;
+    text-align: center; padding-top: 6px;
+}
+.wrap .slider .sliderWrap .slide > .text > h2 {}
+.wrap .slider .sliderWrap .slide > .text > p {} */
+
+/* 이미지 페이드인아웃 */
+.wrap .slider {
+    height: 300px; width: 100%;  background-color: #8a8a8a;
+}
+.wrap .slider .sliderWrap { width: 100%; height: 100%; position: relative; }
+.wrap .slider .sliderWrap .slide { position: absolute; left: 0; top: 0;  width: 100%; height: 100%;}
+.wrap .slider .sliderWrap .slide > img { width: 100%; height: 100%; overflow: hidden;}
+.wrap .slider .sliderWrap .slide > .text {
+    position: absolute; width: 500px; height: 70px;
+    top: 50%; left: 50%; translate: -50% -50%; background-color: #fffa;
+    text-align: center; padding-top: 6px;
+}
+.wrap .slider .sliderWrap .slide > .text > h2 {}
+.wrap .slider .sliderWrap .slide > .text > p {}
+
+.wrap .contents {
+    height: 200px; width: 100%; background-color: #474747;  display: flex;
+}
+.wrap .contents > .content {width: 33.333333%; height: 100%;}
+.wrap .contents > .content1 { background-color: #dfdfdf; }
+.wrap .contents > .content1 > .tabdiv { display: flex; background-color: #a7a7a7; text-align: center;}
+.wrap .contents > .content1 > .tabdiv > .tab > a {
+    padding: 6px; border: 1px solid #000;
+    display: block; height: 40px; width: 100px; }
+/* 갤러리 */
+.wrap .contents > .content1 > .card {
+    padding: 30px;
+    display: flex; 
+    /* display: none; */
+    justify-content: space-between; }
+.wrap .contents > .content1 > .card > .cardimg {  }
+.wrap .contents > .content1 > .card > .cardimg > img { width: 100px; height: 100px;}
+/* 공지사항 */
+.wrap .contents > .content1 > .imformation { padding: 10px; font-size: 13px;}
+.wrap .contents > .content1 > .imformation  div { 
+    padding: 7px;
+    display: flex; justify-content: space-between;}
+.wrap .contents > .content1 > .imformation > div > p {}
+.wrap .contents > .content1 > .imformation > div > p > p {}
+
+
+/* 팝업 */
+.pop { 
+    left: 50%; top:50%; translate: -50% -50%;
+    position: absolute; width: 450px; height: 450px; padding:20px; background-color: #e79393;}
+.pop > h2 {
+    border-bottom: 2px solid rgb(255, 67, 67);
+}
+.pop > p { padding: 10px ; }
+.pop > a {
+    width: 60px; height: 30px; text-align: center; padding-top: 3px;
+    position: absolute; bottom: 20px; left: 50%; translate: -50%; background-color: #ff6c6c;
+}
+
+
+
+.wrap .contents > .content2 { background-image: url(./img/44.png)}
+.wrap .contents > .content2 > h3 { margin: 40px; text-align: center;}
+.wrap .contents > .content2 > a { 
+    width: 100px; height: 50px; display: block; margin: auto; 
+    text-align: center; padding-top: 13px; 
+    border-radius: 23px; background-color: #835252;  }
+
+
+.wrap .contents > .content3 { background-image: url(./img/55.png);}
+.wrap .contents > .content3 > h4 { margin: 20px;}
+.wrap .contents > .content3 > a {
+    width: 100px; height: 100px; display: block; background-color: rgb(138, 101, 34);
+    text-align: center; padding-top: 38px; border-radius: 50%; margin: auto;
+}
+
+.wrap .footer {
+    height: 100px; width: 100%; background-color: #d4d4d4;
+    display: flex; justify-content: space-between; 
+}
+
+.wrap .footer > h1 { width: 30%; margin: auto;padding-left: 40px;}
+.wrap .footer > div {width: 70%; text-align: center; padding: 25px;}
+.wrap .footer > div > a {}
+.wrap .footer > div > span {}
+.wrap .footer > div > p { padding-top: 10px;}
+

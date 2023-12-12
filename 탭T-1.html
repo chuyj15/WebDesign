@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 가로 유형</title>
+    <link rel="stylesheet" href="탭T-1.css">
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo"></div>
+            <div class="nav"></div>
+        </div>
+        <!-- //header-->
+
+        <div id="slider"></div>
+        <!--//slider-->
+
+        <div id="contents">
+            <div class="content1">
+                <div id="contentWrap">
+                    <div class="tabmenu">
+                        <div class="tab tab1">탭메뉴1</div>
+                        <div class="tab tab2">탭메뉴2</div>
+                    </div>
+                    <div class="submenu sub1">
+                        <ul>
+                            <li>서브메뉴1-1</li>
+                            <li>서브메뉴1-2</li>
+                            <li>서브메뉴1-3</li>
+                            <li>서브메뉴1-4</li>
+                        </ul>
+                    </div>
+                    <div class="submenu sub2">
+                        <ul>
+                            <li>서브메뉴2-1</li>
+                            <li>서브메뉴2-2</li>
+                            <li>서브메뉴2-3</li>
+                            <li>서브메뉴2-4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--//content1-->
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+        <!--//contents-->
+
+        <div id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+        <!--//footer-->
+    </div>
+    <!--wrap-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   <script>
+        $('.tab1').addClass('underLine')
+        $('.sub1').fadeIn(0)
+        $('.sub2').fadeOut(0)
+        
+        $('.tab1').click(function(){
+            $('.sub1').fadeIn(0)
+            $('.sub2').fadeOut(0)
+            $('.tab1').addClass('underLine')
+            $('.tab2').removeClass('underLine')
+        })
+        $('.tab2').click(function(){
+            $('.sub2').fadeIn(0)
+            $('.sub1').fadeOut(0)
+            $('.tab2').addClass('underLine')
+            $('.tab1').removeClass('underLine')
+        })
+
+        //show(), hide()로 해도 됨
+   </script>
+</body>
+</html>

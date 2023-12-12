@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-4 산업대학교</title>
+    <link rel="stylesheet" href="./B-4.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <img src="./img/logo.png" alt="로고">
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="javascript:;">MENU-1</a>
+                            <ul class="submenu">
+                                <li><a href="javascript:;">서브메뉴1-1</a></li>
+                                <li><a href="javascript:;">서브메뉴1-2</a></li>
+                                <li><a href="javascript:;">서브메뉴1-3</a></li>
+                                <li><a href="javascript:;">서브메뉴1-4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">MENU-2</a>
+                            <ul class="submenu">
+                                <li><a href="javascript:;">서브메뉴2-1</a></li>
+                                <li><a href="javascript:;">서브메뉴2-2</a></li>
+                                <li><a href="javascript:;">서브메뉴2-3</a></li>
+                                <li><a href="javascript:;">서브메뉴2-4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">MENU-3</a>
+                            <ul class="submenu">
+                                <li><a href="javascript:;">서브메뉴3-1</a></li>
+                                <li><a href="javascript:;">서브메뉴3-2</a></li>
+                                <li><a href="javascript:;">서브메뉴3-3</a></li>
+                                <li><a href="javascript:;">서브메뉴3-4</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:;">MENU-4</a>
+                            <ul class="submenu">
+                                <li><a href="javascript:;">서브메뉴4-1</a></li>
+                                <li><a href="javascript:;">서브메뉴4-2</a></li>
+                                <li><a href="javascript:;">서브메뉴4-3</a></li>
+                                <li><a href="javascript:;">서브메뉴4-4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //header -->
+    
+        <aside class="slider">
+    <div class="sliderWrap">
+        <div class="slide">
+            <img src="./img/1.jpg" alt="이미지1">
+            <div class="text">
+                <h3>1당신이 원하는 교육</h3>
+                <p>1산업대학교</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./img/2.jpg" alt="이미지2">
+            <div class="text">
+                <h3>2당신이 원하는 교육</h3>
+                <p>2산업대학교</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="./img/3.jpg" alt="이미지3">
+            <div class="text">
+                <h3>3당신이 원하는 교육</h3>
+                <p>3산업대학교</p>
+            </div>
+        </div>
+    </div>
+        </aside>
+        <!-- //slider -->
+    
+        <main>
+    
+        </main>
+        <!-- //main -->
+    
+        <footer>
+    <select name="dd" id="dd">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+        </footer>
+        <!-- //footer -->
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="./B-4.js"></script>
+        <script>
+            $('nav > ul > li>a').mouseover(()=>{
+    $('header').addClass('on')
+    $('.submenu').stop().slideDown(400)
+    console.log('여기')
+})
+$('nav ul li .submenu').mouseout(()=>{
+    $('header').removeClass('on')
+    $('.submenu').stop().slideUp(400)
+    console.log('저기')
+})
+        </script>
+    </div>
+</body>
+</html>
